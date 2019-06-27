@@ -8,7 +8,8 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     
-     Artist.new(name: "Drake")
+    Artist.find_by(name: "Drake")||=Artist.new(name: "Drake")
+     
       
     
   end
